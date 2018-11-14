@@ -1,0 +1,59 @@
+==LavaTunnel changelog==
+
+1.3.1:
+- Fixed crashes on certain maps
+- Fixed issues with commands that required playernames
+
+1.3.0:
+- Fixed various protocol errors (my bad)
+- Fixed the "youre too far away" error with 'z and a memory glitch that was also fucking it up
+- Added 'paint <block>, works same as /paint from MCLawl based servers
+- Added 'plotmotion <player> <block>, follow <player> and place <block> where ever they go
+- Added 'copy <chunkname> and 'paste <chunkname>, these are saved to the chunks folder the file type
+is ".chunk", the data is not compressed since it doesnt use much space (each .chunk can be about 2kb)
+
+
+1.2.4:
+- Updated the protocol to support newer CPE packets
+
+1.2.3:
+- Changed 'z to 'z <block>, if no block is given it will use the block you used to define the area
+- Added EnvMapAppearenceV2 support
+- The URL for texture packs is shown in console so you can copy the URL if you'd like, this is a bit buggy
+
+
+1.2.2:
+- Fixed not being able to send messages on some servers
+
+1.2.1:
+- Fixed crash due to CPE update
+
+1.2.0:
+- Added cuboid command ('z <mode>, 'zspeed <speed>), more cuboid types and building commands coming
+soon
+
+1.0.5:
+- Added support for block definitions
+- Fixed crashes on ProCraft due to CPE related bugs
+- Random crashes (especially when switching worlds) should be fixed now
+
+1.0.4:
+- Note: newer procraft servers have a weird CPE that I'm still trying to work out so I reccomend disabling
+CPE on those servers.
+- Added option to disable CPE in config.cfg
+- Increased total size of gimp array to 6024 aka 6024 lines
+
+1.0.3:
+- You can now use server commands while gimped
+- Fixed chat not showing up after changing world
+- Fixed longer gimps being cutoff
+
+1.0.2:
+- Fixed 'hide executing 'back (only 'cancel should execute back)
+- Fixed 'back saying "Unknown command"
+
+1.0.1:
+- Fixed library errors due to missing .dll
+
+1.0.0:
+- Release
