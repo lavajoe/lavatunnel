@@ -1263,12 +1263,12 @@ void *mcConnect() {
             recvW(tunnelSock, &walkspeed, 1, 0);
             recvW(tunnelSock, &runspeed, 1, 0);
             recvW(tunnelSock, &respawn, 1, 0);
-            //recvW(tunnelSock, &pov, 1, 0);
+            recvW(tunnelSock, &pov, 1, 0);
             //recvW(tunnelSock, &speeding, 1, 0);
-            //recvW(tunnelSock, &jumpheight, 1, 0);
-            //recvW(tunnelSock, &superj, 1, 0);
+            recvW(tunnelSock, &jumpheight, 1, 0);
+            recvW(tunnelSock, &superj, 1, 0);
             //recvW(tunnelSock, &thirdperson, 1, 0);
-            recvW(tunnelSock, (char*)&jumpheight, 2, 0);
+            //recvW(tunnelSock, (char*)&jumpheight, 2, 0);
 
             //Ignore server attempts to disable hax
             if (hax == 1) {
@@ -1299,13 +1299,13 @@ void *mcConnect() {
             sendW(serverSock, &walkspeed, 1, 0);
             sendW(serverSock, &runspeed, 1, 0);
             sendW(serverSock, &respawn, 1, 0);
-            //sendW(serverSock, &pov, 1, 0);
-            //sendW(serverSock, &jumpheight, 1, 0);
-            //sendW(serverSock, &superj, 1, 0);
+            sendW(serverSock, &pov, 1, 0);
+            sendW(serverSock, &jumpheight, 1, 0);
+            sendW(serverSock, &superj, 1, 0);
             //sendW(serverSock, &speeding, 1, 0);
             //sendW(serverSock, &spawncontrol, 1, 0);
             //sendW(serverSock, &thirdperson, 1, 0);
-            sendW(serverSock, &buf[0], 2, 0);
+            //sendW(serverSock, &buf[0], 2, 0);
            
         }
 

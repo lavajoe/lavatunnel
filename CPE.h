@@ -28,12 +28,17 @@
 	but the server bool is false then we don't use the exentsion/change the way the protocol works.
 */
 
-bool CPE; //Whether the server suports CPE or not
+typedef struct {
+	bool blockDefs;
+	bool blockDefsExt;
+	bool envMapAspect;
+	bool entProperty;
+	bool extEntityPos; //use ints instead of shorts for addent, entteleport and extaddentity2
+	bool fastMap;
+	bool extText;
+	bool extBlocks; //inf id!!!!!
 
-bool cfastMap;
-bool sfastMap;
-#define fastMap cfastMap && sfastMap //if both client & server support it then we use if(fastMap) then scan for an int in levelint packe, ect.
+} CPE;
 
-bool cEP;
-bool sEP;
-#define EP cEp && sEP
+extern CPE cpeClient; //What the server tells the tunnel
+extern CPE cpeServer; //What the client tell the tunnel

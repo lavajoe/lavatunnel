@@ -166,8 +166,6 @@ void *tunnelServer() { //This is the tunnel server that handles the client
                 memcpy(&buf[2], &y, sizeof(short));
                 memcpy(&buf[4], &z, sizeof(short));
 
-		simplePrint("\n\nGIMPED\n\n");
-
                 //Don't send the packet if we're setting points
                 if (zPlace) {
                 	if (cuboid.place) {
@@ -298,7 +296,6 @@ void *tunnelServer() { //This is the tunnel server that handles the client
 
                 char msg[64];
                 cleanString(msg, message);
-simplePrint("\n\nGIMPED2\n\n");
 
                 if ((msg[0] == '\'') && (strlen(msg) >= 2)) {
                     char command[64];
